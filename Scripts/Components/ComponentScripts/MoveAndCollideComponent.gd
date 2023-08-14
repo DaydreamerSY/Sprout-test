@@ -11,3 +11,7 @@ func _ready():
 
 func _move(movepackage: MovePackage):
 	get_parent().move_and_collide(movepackage.velocity * speed)
+
+func _move_slide(movepackage: MovePackage):
+	var velocity = movepackage.velocity
+	get_parent().move_and_slide()
